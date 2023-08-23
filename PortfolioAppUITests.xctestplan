@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "618E1914-59D6-4699-880E-C607C028FFBC",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:PortfolioApp.xcodeproj",
+        "identifier" : "4AB6F6432A98748500D30FA2",
+        "name" : "PortfolioAppUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

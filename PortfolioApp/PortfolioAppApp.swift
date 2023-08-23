@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct PortfolioAppApp: App {
     @StateObject var dataController = DataController()
+    @Environment(\.scenePhase) var scenePhase
     var body: some Scene {
         WindowGroup {
             NavigationSplitView {
@@ -19,9 +20,16 @@ struct PortfolioAppApp: App {
             } detail: {
                 DetailView()
             }
+            //アプリ起動時にDataControllerインスタンスにアクセス
                 .environment(\.managedObjectContext, dataController.container.viewContext)
                 .environmentObject(dataController)
-            //アプリ起動時にDataControllerインスタンスにアクセス
+            
+            //シーンのフェイズの変化を監視
+                .onChange(of: scenePhase) { phase in
+                    if phase != .active {
+                        dataController.save()
+                    }
+                }
         }
     }
 }

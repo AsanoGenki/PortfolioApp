@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "0087BB2A-8B60-4993-88ED-7A98B13F7685",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:PortfolioApp.xcodeproj",
+        "identifier" : "4AB6F5FA2A98300B00D30FA2",
+        "name" : "PortfolioAppTests"
+      }
+    }
+  ],
+  "version" : 1
+}
